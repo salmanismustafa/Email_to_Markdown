@@ -1,7 +1,4 @@
 
-This `README.md` file provides an overview of the application, installation instructions, usage guidelines, and script details. You can add more sections or modify existing ones based on your requirements
-
-
 # Email to Markdown Converter
 
 This application fetches emails from a specified sender, converts them to Markdown format, and publishes them on your personal website via Git.
@@ -34,9 +31,11 @@ This application fetches emails from a specified sender, converts them to Markdo
 
  
 
-export EMAIL_USER="your-email@gmail.com"
-export EMAIL_PASS="your-password"
-export EMAIL_SENDER="specific-sender@example.com"
+         export EMAIL_USER="your-email@gmail.com"
+         
+         export EMAIL_PASS="your-password"
+         
+         export EMAIL_SENDER="specific-sender@example.com"
 
 For Windows:
 
@@ -48,8 +47,6 @@ For Windows:
     Add EMAIL_SENDER as the variable name and specific-sender@example.com as the value.
 
 Install Required Packages
-
-sh
 
     pip install imapclient
     pip install markdownify
@@ -69,43 +66,46 @@ Usage
 Script Details
 fetch_emails(sender)
 
-Connects to the email server and fetches emails from the specified sender.
-email_to_markdown(msg)
+      Connects to the email server and fetches emails from the specified sender.
+      email_to_markdown(msg)
 
 Converts the fetched email to Markdown format.
-save_markdown(markdown_content, filename)
+
+      save_markdown(markdown_content, filename)
 
 Saves the converted Markdown content to a file.
-git_commit_and_push()
+
+      git_commit_and_push()
 
 Commits and pushes the changes to the Git repository.
+
 Example
 
 Here’s what you might see in the terminal when you run the script:
 
-sh
 
-$ python your_script_name.py
-Connecting to email server as your-email@gmail.com
-Logged in to email server
-Searching for emails from specific-sender@example.com
-Found 2 emails from specific-sender@example.com
-Fetched email with UID 123
-Converting email to Markdown: Important Update
-Saving Markdown content to emails/2024-05-17-Important_Update.md
-Committing and pushing changes to Git repository
-Changes pushed to Git repository
-Fetched email with UID 124
-Converting email to Markdown: Another Update
-Saving Markdown content to emails/2024-05-17-Another_Update.md
-Committing and pushing changes to Git repository
-Changes pushed to Git repository
-Logged out from email server
-Script completed successfully
+      $ python your_script_name.py
+      Connecting to email server as your-email@gmail.com
+      Logged in to email server
+      Searching for emails from specific-sender@example.com
+      Found 2 emails from specific-sender@example.com
+      Fetched email with UID 123
+      Converting email to Markdown: Important Update
+      Saving Markdown content to emails/2024-05-17-Important_Update.md
+      Committing and pushing changes to Git repository
+      Changes pushed to Git repository
+      Fetched email with UID 124
+      Converting email to Markdown: Another Update
+      Saving Markdown content to emails/2024-05-17-Another_Update.md
+      Committing and pushing changes to Git repository
+      Changes pushed to Git repository
+      Logged out from email server
+      Script completed successfully
 
 License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
 Acknowledgements
 
     imapclient for making IMAP easy to use.
